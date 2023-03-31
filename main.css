@@ -125,6 +125,22 @@ footer {
     width: 100%;
 }
 
+footer h4 {
+    display: none;
+}
+
+.footer_title {
+    display: flex;
+    align-items: center;
+}
+
+.social_icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
 ul {
     display: flex;
     gap: 20px;
@@ -153,4 +169,116 @@ ul a i {
     font-size: 15px;
     bottom: -2px;
     left: 2px;
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav input,
+    .auth_btn .btn,
+    main h3 {
+        display: none;
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+
+    .nav {
+        padding: 15px 30px;
+    }
+
+    .nav .logo a {
+        font-size: 1.5rem;
+    }
+
+    .nav label {
+        background-color: transparent;
+        color: #fff;
+        position: absolute;
+        right: 7rem;
+        font-size: 22px;
+    }
+
+    .auth_btn a {
+        border: 2px solid #fff;
+        padding: 5px 10px
+    }
+
+    main {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main h1 {
+        font-size: 2.2rem;
+        margin-bottom: -10rem;
+    }
+
+    main .btn {
+        font-size: 1rem;
+        margin-bottom: 10rem;
+        padding: 10px 15px;
+    }
+
+    footer {
+        position: relative;
+        padding: 0 10px;
+    }
+
+    ul {
+        flex-direction: column;
+        justify-content: center;
+        gap: unset;
+    }
+
+    ul a {
+        padding: 15px 0;
+        border-bottom: 1px solid grey;
+        /* font-weight: 600; */
+    }
+
+    ul a:nth-child(6),
+    ul a:nth-child(10) {
+        display: none;
+    }
+
+    .footer_title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer_title a {
+        margin-top: 20px;
+        border-bottom: none;
+    }
+
+    .footer_title h4 {
+        color: grey;
+        font-size: .8rem;
+        padding-bottom: 20px;
+        margin-top: -10px;
+    }
+
+    .social_icons {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .social_icons a {
+        border-bottom: none;
+    }
+
 }
